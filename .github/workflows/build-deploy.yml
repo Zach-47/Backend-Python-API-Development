@@ -79,6 +79,8 @@ jobs:
     steps:
       - name: pulling git repo
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Install Heroku CLI
         run: curl https://cli-assets.heroku.com/install.sh | sh
       - name: Deploy to Heroku
