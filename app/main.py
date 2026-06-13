@@ -25,7 +25,7 @@ app.include_router(vote.router)
 
 @app.get("/")
 def root():
-    return {"message": "I am the GOAT, always will be"}
+    return {"message": "I am the GOAT, always"}
 
 # @app.get("/sqlalchemy")
 # def test_posts(db: Session = Depends(get_db)):
