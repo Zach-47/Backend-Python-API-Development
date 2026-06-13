@@ -15,7 +15,7 @@ class UserOut(BaseModel):
     email: EmailStr
     created_at: datetime
 
-    class Config:
+    class ConfigDict:
         from_attributes = True
 
 class Post(PostBase):
@@ -25,13 +25,13 @@ class Post(PostBase):
     owner: UserOut
 
     #convert schemas to orm compatible format
-    class Config:
+    class ConfigDict:
         from_attributes = True
 
 class PostOut(BaseModel):
     Post: Post
     votes: int
-    class Config:
+    class ConfigDict:
         from_attributes = True
 
 class UserCreate(BaseModel):
